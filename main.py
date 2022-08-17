@@ -100,4 +100,5 @@ st.write(dis)
 for x, y in zip(df['위도'], df['경도']):
     dis=distance(result.get("GET_LOCATION")['lat'], result.get("GET_LOCATION")['lon'],x ,y)
     if dis<400000:
+        pass
           
