@@ -96,7 +96,7 @@ if result:
 dis=distance(result.get("GET_LOCATION")['lat'], result.get("GET_LOCATION")['lon'], 37.563953,127.007410)    
 st.write(dis)
 
-
+df=blah()
 for x, y in zip(df['위도'], df['경도']):
     dis=distance(result.get("GET_LOCATION")['lat'], result.get("GET_LOCATION")['lon'],x ,y)
     if dis<400000:
