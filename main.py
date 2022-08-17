@@ -48,7 +48,7 @@ def blah():
     origin_df = pd.read_csv('data/origin.csv')
     summary_df = pd.read_csv('data/df_placesummary.csv')
     df = pd.concat([origin_df, summary_df], axis=1)
-    st.dataframe(df)
+    return df
     
 
 test_text = st.text_input('긍정/부정 문장 판독', '이거 ')
@@ -97,10 +97,7 @@ dis=distance(result.get("GET_LOCATION")['lat'], result.get("GET_LOCATION")['lon'
 st.write(dis)
 
 
-df_ = pd.read_csv('data/df__')
-count=0
-for x, y in zip(df_['위도'], df_['경도']):
-    if distance(result.get("GET_LOCATION")['lat'], result.get("GET_LOCATION")['lon'],x ,y)<400000:
-        count = count + 1
-      
-st.st.dataframe(count)
+for x, y in zip(df['위도'], df['경도']):
+    dis=distance(result.get("GET_LOCATION")['lat'], result.get("GET_LOCATION")['lon'],x ,y)
+    if dis<400000:
+          
